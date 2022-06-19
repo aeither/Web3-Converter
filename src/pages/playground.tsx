@@ -25,8 +25,6 @@ function playground() {
     window.navigator.share(shareData);
   };
 
-  const wdw = window as any;
-
   return (
     <VStack
       bgImage="/colorfulBackground.jpeg"
@@ -40,7 +38,14 @@ function playground() {
         </Center>
         <Button onClick={vibrate}>Vibrate a little</Button>
         <Button onClick={share}>Mobile Share</Button>
-        <Button onClick={() => wdw.umami("Umami button click")}>Umami</Button>
+        <Button
+          onClick={() => {
+            const wdw = window as any;
+            wdw.umami("Umami button click");
+          }}
+        >
+          Umami
+        </Button>
         <Spacer />
 
         <Center boxSize="100px" bg="twitter.400">
