@@ -100,7 +100,7 @@ function StringHexConverter() {
         })
       }
     >
-      <Button>Copy {text}</Button>
+      <Button className="umami--click--copy-button">Copy {text}</Button>
     </CopyToClipboard>
   );
 
