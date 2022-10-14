@@ -2,18 +2,17 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import { EmotionCache } from "@emotion/cache";
 import { CacheProvider } from "@emotion/react";
+import "@fontsource/lexend/latin.css";
 import { DefaultSeo } from "next-seo";
 import { AppProps } from "next/app";
 import Head from "next/head";
-import "@fontsource/lexend/latin.css";
 
-import defaultSEOConfig from "../../next-seo.config";
-import { SupabaseProvider } from "../supabase";
 import Layout from "components/layout";
 import createEmotionCache from "styles/createEmotionCache";
-import theme from "styles/theme";
 import "styles/globals.css";
-import Script from "next/script";
+import theme from "styles/theme";
+import defaultSEOConfig from "../../next-seo.config";
+import { SupabaseProvider } from "../supabase";
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -40,12 +39,6 @@ const MyApp = ({
           <Layout>
             <Component {...pageProps} />
           </Layout>
-          <Script
-            async
-            defer
-            data-website-id="e19641ad-4f8b-4941-8d79-08cd62d215be"
-            src="https://umami-production-f45b.up.railway.app/umami.js"
-          />
         </ChakraProvider>
       </CacheProvider>
     </SupabaseProvider>

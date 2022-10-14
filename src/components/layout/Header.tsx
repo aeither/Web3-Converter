@@ -36,11 +36,9 @@ const LinkItem = ({ href, children, ...props }: any) => {
 const LinkItems = () => {
   return (
     <>
-      <LinkItem href="/polkatools">Polkatools</LinkItem>
-      <LinkItem href="/impermanentloss">IL Calc</LinkItem>
-      <LinkItem href="/supa">Supa</LinkItem>
-      <LinkItem href="/playground">.</LinkItem>
       <LinkItem href="/abi2solidity">abi2solidity</LinkItem>
+      <LinkItem href="/impermanentloss">IL Calc</LinkItem>
+      <LinkItem href="/polkatools">Polkatools</LinkItem>
     </>
   );
 };
@@ -81,7 +79,7 @@ const Header = () => {
           </HStack>
         </HStack>
         <HStack marginLeft="auto">
-          <ConnectCard />
+          {/* <ConnectCard /> */}
           <ThemeToggle />
         </HStack>
       </Container>
